@@ -25,3 +25,15 @@ function division(){
     var resultado = valor1 / valor2;
     alert("Resultado de la division de " + valor1 + " y " + valor2 + " es: " + resultado);
 }
+
+// Responsive menu toggle: click on the header title to open/close menu on small screens
+document.addEventListener('DOMContentLoaded', function(){
+    var menuTitle = document.querySelector('.menu h1');
+    var menuList = document.querySelector('.menu ul');
+    if(menuTitle && menuList){
+        menuTitle.style.cursor = 'pointer';
+        menuTitle.addEventListener('click', function(){
+            menuList.classList.toggle('open');
+        });
+    }
+});
